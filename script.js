@@ -9,7 +9,7 @@ if(songBanner && songBanner.innerHTML === '') {
 // Initialize the Variables
 let songIndex = 0;
 let audioElement = document.getElementById('audioPlayer');
-audioElement.src = 'songs/1.mp3';
+audioElement.src = 'songs/2.mp3';
 audioElement.addEventListener('canplaythrough', ()=>{
     console.log("Audio is ready to play!");
 })
@@ -76,7 +76,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
         makeAllPlays();
         songIndex = parseInt(e.target.id);
         e.target.innerText = '⏸';
-        audioElement.src = `songs/${songIndex+1}.mp3`;
+        audioElement.src = songs[songIndex].filePath;
         masterSongName.innerText = songs[songIndex].songName;
         audioElement.currentTime = 0;
         audioElement.play();
@@ -92,7 +92,7 @@ document.getElementById('next').addEventListener('click', ()=>{
     else{
         songIndex += 1;
     }
-    audioElement.src = `songs/${songIndex+1}.mp3`;
+    audioElement.src = songs[songIndex].filePath;
     masterSongName.innerText = songs[songIndex].songName;
     audioElement.currentTime = 0;
     audioElement.play();
@@ -108,7 +108,7 @@ document.getElementById('previous').addEventListener('click', ()=>{
     else{
         songIndex -= 1;
     }
-    audioElement.src = `songs/${songIndex+1}.mp3`;
+    audioElement.src = songs[songIndex].filePath;
     masterSongName.innerText = songs[songIndex].songName;
     audioElement.currentTime = 0;
     audioElement.play();
