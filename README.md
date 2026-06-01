@@ -19,7 +19,7 @@ It's a music player inspired by Spotify's UI.
 
 ## Live Demo
 
-[▶ Click here to play](https://yash-01-sketch.github.io/Spotify-Clone/)
+[▶ Click here to play](https://belistner.netlify.app/)
 
 ## Disclaimer
 
